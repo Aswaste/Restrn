@@ -3,6 +3,6 @@ WORKDIR /app
 
 COPY requirements.txt /app/
 RUN pip3 install -r requirements.txt
-
+EXPOSE 8080
 COPY . /app
 CMD flask run -h 0.0.0.0 -p 8080 & python3 main.py
